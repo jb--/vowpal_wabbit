@@ -100,6 +100,7 @@ class VW(BaseEstimator):
                  max_prediction=None,
                  sort_features=None,
                  loss_function=None,
+                 log_multi=None,
                  link=None,
                  quantile_tau=None,
                  l1=None,
@@ -115,7 +116,8 @@ class VW(BaseEstimator):
                  oaa=None,
                  ect=None,
                  csoaa=None,
-                 wap=None):
+                 wap=None,
+                 log_multi=None):
         """VW model constructor, exposing all supported parameters to keep sklearn happy
 
         Parameters
@@ -210,6 +212,7 @@ class VW(BaseEstimator):
         ect (int): Use error correcting tournament multiclass learning
         csoaa (int): Use cost sensitive one-against-all multiclass learning
         wap (int): Use weighted all pairs multiclass learning
+        log_multi (int): Use online tree for multiclass learning
 
         Contextual Bandit Optimization
         cb (int): Use contextual bandit learning with specified costs
